@@ -7,7 +7,7 @@ import SurveyNew from './SurveyNew';
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
       <BrowserRouter>
       <div>
           <Header />
