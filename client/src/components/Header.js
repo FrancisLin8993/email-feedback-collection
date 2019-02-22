@@ -5,10 +5,10 @@ class Header extends React.Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <a className="left brand-logo">Emailfc</a>
+          <a href="/" className="left brand-logo">Emailfc</a>
           <ul className="right">
             <li>
-              <a>Login with Google</a>
+              <a href="">Login with Google</a>
             </li>
           </ul>
         </div>
