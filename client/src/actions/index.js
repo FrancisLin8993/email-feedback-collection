@@ -1,6 +1,8 @@
-import axios from 'axios';
-import {FETCH_USER} from './types';
+import axios from "axios";
+import { FETCH_USER } from "./types";
 
 const fetchUser = () => {
-    axios.get('/api/current_user');
-}
+  return function(dispatch) {
+    axios.get("/api/current_user");
+  };
+};
