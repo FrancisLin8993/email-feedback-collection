@@ -5,7 +5,7 @@ import * as actions from "../actions";
 import Header from "./Header";
 import Dashboard from "./Dashboard";
 import Landing from "./Landing";
-import SurveyNew from "./SurveyNew";
+import SurveyNew from "./surveys/SurveyNew";
 
 class App extends React.Component {
   componentDidMount() {
@@ -14,18 +14,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <BrowserRouter>
-          <div>
-            <Header />
-            <Route path="/" exact component={Landing} />
-            <Route path="/surveys" exact component={Dashboard} />
-            <Route path="/surveys/new" component={SurveyNew} />
-          </div>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <div className="container">
+          <Header />
+          <Route path="/" exact component={Landing} />
+          <Route path="/surveys" exact component={Dashboard} />
+          <Route path="/surveys/new" component={SurveyNew} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
 
-export default connect(null, actions)(App);
+export default connect(
+  null,
+  actions
+)(App);
