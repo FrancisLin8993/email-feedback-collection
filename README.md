@@ -1,0 +1,1 @@
+This is an app for sending email to others to collect feedbacks.
