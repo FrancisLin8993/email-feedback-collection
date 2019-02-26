@@ -1,15 +1,15 @@
 const sendgrid = require("sendgrid");
-const mailHelper = sendgrid.mail;
+const helper = sendgrid.mail;
 const keys = require("../config/keys");
 
-class Mailer extends mailHelper.Mail {
+class Mailer extends helper.Mail {
   constructor({ subject, recipients }, content) {
     super();
 
     this.sgApi = sendgrid(keys.sendGridKey);
-    this.from_email = new mailHelper.Email("no-reply@emailfc.com");
+    this.from_email = new helper.Email("no-reply@emailfc.com");
     this.subject = subject;
-    this.body = new mailHelper.Content("text/html", content);
+    this.body = new helper.Content("text/html", content);
     this.recipients = this.formatAddresses(recipients);
 
     this.addContent(this.body);
@@ -19,24 +19,24 @@ class Mailer extends mailHelper.Mail {
 
   formatAddresses(recipients) {
     return recipients.map(({ email }) => {
-      return new mailHelper.Email(email);
+      return new helper.Email(email);
     });
   }
 
   addClickTracking() {
-    const trackingSettings = new mailHelper.TrackingSettings();
-    const clickTracking = new mailHelper.ClickTracking(true, true);
+    const trackingSettings = new helper.TrackingSettings();
+    const clickTracking = new helper.ClickTracking(true, true);
 
     trackingSettings.setClickTracking(clickTracking);
     this.addTrackingSettings(trackingSettings);
   }
 
   addRecipients() {
-    const personalization = new mailHelper.Personalization();
+    const personalize = new helper.Personalization();
     this.recipients.forEach(recipient => {
-      personalization.addTo(recipient);
+      personalize.addTo(recipient);
     });
-    this.addPersonalization(personalization);
+    this.addPersonalization(personalize);
   }
 
   async send() {
