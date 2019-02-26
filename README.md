@@ -4,15 +4,15 @@ This is a tutorial project of Stephen Grider's Node Fullstack course in udemy.co
 
 ---
 
-Project expansion TODO list:
+Project expansion & improvement TODO list:
 
-
+- **The version of the sendgrid package in the project is deprecated. Update the package to the newest version and refactor relevant code.**
 - Change the MaterialCSS into MaterialUI. 
 - Make the app become responsive.
-- Try to refactor the React app into Typescript.
 - Change authentication mechanism from cookie-based to JWT.
 - Integrate the app with CI server(TravisCI).
 - Add test code (including unit test and integration test).
 - Add PM2 library.
 - Add Redis.
 - Use GraphQL.
+- Try to refactor the app into Typescript.

@@ -9,7 +9,7 @@ const surveySchema = new Schema({
   recipients: [RecipientSchema],
   amountOfYes: { type: Number, default: 0 },
   amountOfNo: { type: Number, default: 0 },
-  _user: { type: Schema.Types.ObjectId, ref: "user" },
+  _user: { type: Schema.Types.ObjectId, ref: "User" },
   dateSent: Date,
   lastResponded: Date
 });
