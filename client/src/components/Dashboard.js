@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SurveyList from './surveys/SurveyList';
 
 class Dashboard extends React.Component {
   render() {
