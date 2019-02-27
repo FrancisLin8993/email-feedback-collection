@@ -16,3 +16,8 @@ Project expansion & improvement TODO list:
 - Add Redis.
 - Use GraphQL.
 - Try to refactor the app into Typescript.
+- Add roles in the user model.
+- Add admin management console.
+- Allow users to delete surveys.
+- Allow client side sorting of surveys.
+- Add pagination of surveys.
