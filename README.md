@@ -1,18 +1,26 @@
 The major function of is app is sending email to others to collect feedbacks.
 
-This is a tutorial project of Stephen Grider's Node Fullstack course in udemy.com. I will expand this project personally for learning purpose.
+This is a tutorial project of Stephen Grider's [*Node with React: Fullstack Web Development*](https://www.udemy.com/node-with-react-fullstack-web-development/) course on udemy.com. I will expand and improve this project personally for learning purpose.
+
+---
+####Run Instructions
+
+1. Install the dependencies of server side app: `npm i`
+1. Install the dependencies of client app: `cd client`, then`npm i`
+1. Run the project: `npm run dev`
+
+
 
 ---
 
-Project expansion & improvement TODO list:
+####Project expansion & improvement TODO list:
 
 - [x] The version of the sendgrid nodejs npm package in the project is deprecated. Update the sendgrid npm package to the newest version and refactor relevant code.
 - Change the MaterialCSS into MaterialUI. 
 - Make the app become responsive.
 - Change authentication mechanism from cookie-based to JWT.
-- Integrate the app with CI server(TravisCI).
-- Add test code (including unit test and integration test).
-- Add PM2 library.
+- Integrate the app with TravisCI.
+- Add test code
 - Add Redis.
 - Use GraphQL.
 - Try to refactor the app into Typescript.
@@ -21,3 +29,5 @@ Project expansion & improvement TODO list:
 - Allow users to delete surveys.
 - Allow client side sorting of surveys.
 - Add pagination of surveys.
+
+More features to be added...
