@@ -4,7 +4,7 @@ import { fetchSurveys } from "../../actions";
 
 class SurveyList extends React.Component {
   componentDidMount() {
-    this.props.fetchSurveys;
+    this.props.fetchSurveys();
   }
   renderSurveys() {
     return this.props.surveys.reverse().map(survey => {
@@ -34,5 +34,5 @@ function mapStateToProps({ surveys }) {
 
 export default connect(
   mapStateToProps,
-  fetchSurveys
+  { fetchSurveys }
 )(SurveyList);

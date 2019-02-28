@@ -4,7 +4,7 @@ const { URL } = require("url");
 const mongoose = require("mongoose");
 const requireLogin = require("../middlewares/requireLogin");
 const requireCredits = require("../middlewares/requireCredits");
-const Mailer = require("../services/Mailer");
+const MessageObject = require("../services/MessageObject");
 const surveyTemplate = require("../services/emailTemplates/surveyTemplate");
 
 mongoose.Promise = global.Promise;
@@ -35,17 +35,21 @@ module.exports = app => {
       dateSent: Date.now()
     });
 
-    const mailer = new Mailer(survey, surveyTemplate(survey));
+    const sgMail = require("@sendgrid/mail");
+    const keys = require("../config/keys");
+    sgMail.setApiKey(keys.sendGridKey);
 
     try {
-      await mailer.send();
-
+      const result = await sgMail.send(
+        MessageObject(survey, surveyTemplate(survey))
+      );
+      console.log(result);
       await survey.save();
       req.user.credits -= 1;
       const user = await req.user.save();
       res.send(user);
-    } catch (err) {
-      res.status(422).send(err);
+    } catch (error) {
+      res.status(422).send(error);
     }
   });
 
