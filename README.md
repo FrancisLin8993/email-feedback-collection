@@ -6,7 +6,7 @@ This is a tutorial project of Stephen Grider's Node Fullstack course in udemy.co
 
 Project expansion & improvement TODO list:
 
-- **The version of the sendgrid npm package in the project is deprecated. Update the package to the newest version and refactor relevant code.**
+- [x] The version of the sendgrid nodejs npm package in the project is deprecated. Update the sendgrid npm package to the newest version and refactor relevant code.
 - Change the MaterialCSS into MaterialUI. 
 - Make the app become responsive.
 - Change authentication mechanism from cookie-based to JWT.
