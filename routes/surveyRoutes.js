@@ -40,10 +40,12 @@ module.exports = app => {
     sgMail.setApiKey(keys.sendGridKey);
 
     try {
-      const result = await sgMail.send(
-        MessageObject(survey, surveyTemplate(survey))
-      );
-      console.log(result);
+      sgMail
+        .send(MessageObject(survey, surveyTemplate(survey)))
+        .then(() => {})
+        .catch(error => {
+          console.error(error.toString());
+        });
       await survey.save();
       req.user.credits -= 1;
       const user = await req.user.save();

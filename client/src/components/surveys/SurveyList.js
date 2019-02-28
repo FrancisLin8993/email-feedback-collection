@@ -17,7 +17,10 @@ class SurveyList extends React.Component {
               Sent On: {new Date(survey.dateSent).toLocaleDateString()}
             </p>
           </div>
-          <div className="card-action" />
+          <div className="card-action">
+            <a>Yes: {survey.yes}</a>
+            <a>No: {survey.no}</a>
+          </div>
         </div>
       );
     });
