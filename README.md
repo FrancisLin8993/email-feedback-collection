@@ -16,12 +16,12 @@ This is a tutorial project of Stephen Grider's [*Node with React: Fullstack Web 
 #### Project expansion & improvement TODO list:
 
 - [x] The version of the sendgrid nodejs npm package in the project is deprecated. Update the sendgrid npm package to the newest version and refactor relevant code.
+- [x] Integrate with Redis.
 - Change the MaterialCSS into MaterialUI. 
 - Make the app become responsive.
 - Change authentication mechanism from cookie-based to JWT.
 - Integrate the app with TravisCI.
-- Add test code
-- Add Redis.
+- Add test code.
 - Use GraphQL.
 - Try to refactor the app into Typescript.
 - Add roles in the user model.
