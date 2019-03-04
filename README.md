@@ -21,7 +21,6 @@ This is a tutorial project of Stephen Grider's [*Node with React: Fullstack Web 
 - Make the app become responsive.
 - Change authentication mechanism from cookie-based to JWT.
 - Integrate the app with TravisCI.
-- Add test code.
 - Use GraphQL.
 - Try to refactor the app into Typescript.
 - Add roles in the user model.
