@@ -9,6 +9,10 @@ This is a tutorial project of Stephen Grider's [*Node with React: Fullstack Web 
 1. Install the dependencies of client app: `cd client`, then`npm i`
 1. Run the project: `npm run dev`
 
+Note:
+
+1. Before running the project in dev mode, a `dev.js` file needs be to created to include all the important keys of third-party APIs and connection links.
+1. Even in the production environment of the app, the Stripe API is in test mode. So if you test the payment function it will not charge any money.
 
 
 ---
