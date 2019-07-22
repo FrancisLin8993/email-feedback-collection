@@ -13,7 +13,7 @@ class Landing extends React.Component {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '100vh'
+          minHeight: '75vh'
         }}
       >
         <h1 style={{ marginTop: '0' }}>Emailfc</h1>
