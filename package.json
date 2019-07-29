@@ -6,6 +6,9 @@
   "engines": {
     "node": "10.14.2"
   },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./tests/setup.js"
+  },
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
