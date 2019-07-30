@@ -6,6 +6,5 @@ module.exports = {
   stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
   stripeSecretKey: process.env.STRIPE_SECRET_KEY,
   sendGridKey: process.env.SEND_GRID_KEY,
-  redirectDomain: process.env.REDIRECT_DOMAIN,
   redisUrl: 'redis://127.0.0.1:6379'
 };
