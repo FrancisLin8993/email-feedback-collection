@@ -1,6 +1,6 @@
-import React from "react";
-import { connect } from "react-redux";
-import { fetchSurveys } from "../../actions";
+import React from 'react';
+import { connect } from 'react-redux';
+import { fetchSurveys } from '../../actions';
 
 class SurveyList extends React.Component {
   componentDidMount() {
@@ -18,8 +18,8 @@ class SurveyList extends React.Component {
             </p>
           </div>
           <div className="card-action">
-            <a>Yes: {survey.yes}</a>
-            <a>No: {survey.no}</a>
+            <a href="#">Yes: {survey.yes}</a>
+            <a href="#">No: {survey.no}</a>
           </div>
         </div>
       );
