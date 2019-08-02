@@ -5,7 +5,6 @@ dist: trusty
 sudo: required
 addons:
   chrome: stable
-  hostname: localhost
 services:
   - mongodb
   - redis-server
