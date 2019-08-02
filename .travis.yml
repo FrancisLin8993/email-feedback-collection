@@ -8,8 +8,7 @@ services:
   - mongodb
   - redis-server
 env:
-  - NODE_ENV=ci PORT=3000
-  - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+  - NODE_ENV=ci PORT=3000 PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 cache:
   directories:
     - node_modules
