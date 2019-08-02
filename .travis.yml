@@ -2,15 +2,24 @@ language: node_js
 node_js:
   - '8'
 dist: trusty
+addons:
+  chrome: stable
 services:
   - mongodb
   - redis-server
 env:
   - NODE_ENV=ci PORT=3000
+  - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 cache:
   directories:
     - node_modules
     - client/node_modules
+before_install:
+  # Enable user namespace cloning
+  - 'sysctl kernel.unprivileged_userns_clone=1'
+  # Launch XVFB
+  - 'export DISPLAY=:99.0'
+  - 'sh -e /etc/init.d/xvfb start'
 install:
   - npm install
   - npm run build
